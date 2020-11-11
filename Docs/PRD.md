@@ -90,20 +90,7 @@ https://miro.com/welcomeonboard/HE1ungDhs7GQTMv8zZu7l9ws7N5WSmyuCz2MTAw98HqNzWK6
 
 
 ## 3. 產品設計原型
-有哪些頁面
 
-Launch
-1. 入口頁
-   - P0 填寫活動名稱
-   - P1 signup/
-   - P0 引導到 Page.2
-   - 逐步教學
-2. 選擇日期、活動選項
-   - 修改活動名稱
-   - 活動長度
-
-
-Pick
 ### 3.1 wireframe
 https://miro.com/welcomeonboard/HE1ungDhs7GQTMv8zZu7l9ws7N5WSmyuCz2MTAw98HqNzWK6Fkb6V0Wg1a9Zvsjg
 
