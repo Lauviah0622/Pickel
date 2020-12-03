@@ -6,24 +6,34 @@ password 自行設置
 
 {
     id pk
-    event_state [setting, picking],
-    eventname 名稱 varchar 
+    name 名稱 varchar 
     description 描述 text
-    launcher_id 發起人 int FK launcher.id
+    launcher_id varchar
     picking_start 開始選擇時間 time
     picking_end 結束選擇時間 time
     duration 活動預計時長 int，如果 type 是 event_type 那麼就是 15 分鐘為單位，如果是 allday，那就是以 天 為單位
     detemine_time
     event_type [part, allday]
-    event_range_start 投票開始時間
-    event_range_end 投票結束時間
-    password 
+    token 
     event_suffix token_id varchar (rand(1,9) * pow(10, 9) + id).toString().base64 
+    
     pick_suffix token_id 
-    一個 event 生成一個 JWT 的 token，防止有人進入自己的投票，然後向其他人的 event 發出 update 的 request 或者是 pick
+
+    > 保持投票設定頁的隱私性，所以投票設定頁的 suffix 還有 時間選擇頁的 suffix 不一樣
+
 
     created_time
     updated_time
+}
+
+
+
+### range
+{
+    id 
+    event_id
+    range_start
+    range_end
 }
 
 ### token
@@ -32,12 +42,6 @@ password 自行設置
     token_id
 }
 
-
-### Launcher 
-{
-    id
-    name varchar
-}
 
 ### Pick
 

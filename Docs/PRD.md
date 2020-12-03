@@ -66,7 +66,8 @@ Event launcher: Ming
 - 發起投票的行為稱為 launch event，發起者稱為 launcher，中文叫做發起者
 - 在這個 event 中選擇自己可以選擇的時間這個行為稱為 pick，選擇的人稱作 picker，中文叫做參與者
 - laucher 本身也可以做為一位 picker
-- 發起活動者，設定活動的網址稱作 event Page ，這個 page 在 determine 之後會變
+- 發起活動者，設定活動的網址稱作 event Page，中文為：投票設定頁
+- pick 的頁面稱作 pick Page，中文：時間選擇頁
 
 #### event 的基本要素
 
