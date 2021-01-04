@@ -107,15 +107,31 @@ event 有一些基本要素：
 
 一個 Event 有幾種狀態：
 
-- setting：已經設定好基本選項，但還沒開始投票
+- prePicking：已經設定好基本選項，但還沒開始投票
+  - 在這段期間，可以重新設定任何資訊，但是設定完需要點擊更新活動資訊
+  - 更新後，可以點擊 提早開始活動，這會直接更新 pickstart 的時間
 - picking：提供大家做選擇
-  - 在這段期間不給設定 range 以及 duration, 還有 picking start & picking end
-- endPicking：投票完成，但還沒有確定時間
+  - 在這段期間只能更改 description，設定完也要點擊更新活動資訊，
+  - 可以點擊暫停投票
+    1. pickStart 改成 now
+    2. 重新進入 prepicking
+    4. 之前的投票保留
+  - 可以點擊重新投票，重新進入 prepicking，然後之前的投票刪除
+    1. pickStart 改成 now
+    2. 重新進入 prepicking
+    4. 之前的投票刪除
+  - 可以點擊終止投票，
+    1. pickEnd 改成 now
+  - 可以看投票的狀況
+- postPicking：投票完成，但還沒有確定時間
 
   - 當下時間超過 picling end
-  - 在這段期間可以重新設定 duration
-
+  - 在這段期間可以重新設定 duration, name, launcher, description
+  - 可以點擊重新投票，重新設定 pickStart 變成 now，pickEnd = now + 1 day, 投票全部刪除
+  - 可以設定 determined
+  - 可以看投票的狀況
 - determined：已經確定時間的活動
+  - 全部都不能改動，只能看投票的狀況
 
 #### Pick 的基本要素
 

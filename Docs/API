@@ -1,0 +1,211 @@
+response template :
+{
+    body: {
+        ok: true || false
+        message: 沒有 data 的時後會加上去，通常是 error 才會有
+        data {
+            依照需求給資料
+            event_data {}
+            token
+
+        }
+        
+    }
+}
+
+
+
+JWT Authorisation
+{
+    payload: {
+        _id: event_id
+        status: launcher, picker 
+        如果是利用 event_suffix 進入 === launcher
+        如果是利用 pick_suffix 進入 === picker
+        exp: 1小時
+    },
+
+}
+
+
+
+## /event
+
+GET /event/
+
+response {
+    return Page
+}
+
+
+POST /event/
+createEvent
+request{
+    header {
+        X-CSRF-TOKEN: bcrypt('pickel') 加鹽，後端驗證
+    }
+    body {
+        name
+        description
+        range [
+            {start, end}
+        ]
+        
+        picking_start
+        picking_end
+        duration
+        type
+        earliest_time 最早活動開始時間
+        latest_time 最晚活動結束時間
+    }
+}
+
+response {
+    body {
+        id
+        name
+        description
+        launcher_id
+        range [
+            {start, end}
+        ]
+        duration
+        type
+        event_suffix 
+        pick_suffix 
+        token: status=launcher
+
+    }
+}
+
+
+## /event/?event_suffix
+
+getEventData
+GET /event/?event_suffix
+
+request {
+    body: null
+}
+
+response {
+    data: {
+        id
+        name
+        description
+        launcher_id
+        range [
+            {start, end}
+        ]
+        picking_start
+        picking_end
+        duration
+        type
+        event_suffix 
+        pick_suffix 
+        token: status=launcher
+        
+    },
+    picks: [
+            {
+                id,
+                name,
+                periods: [
+                    description,
+                    start,
+                    deration,
+                    priority
+                ]
+            }
+        ]
+}
+
+
+updateEventData
+PATCH /event/?event_suffix 
+
+request{
+    header {
+        authentication: Berear
+    }
+    body {
+        id
+        name
+        description
+        launcher_id
+        range [
+            {start, end}
+        ]
+        picking_start
+        picking_end
+        duration
+        type
+        event_suffix 
+        pick_suffix 
+    }
+}
+
+response {
+    data: {
+        id
+        name
+        description
+        launcher_id
+        picking_start
+        picking_end
+        duration
+        type
+        earliest_time 最早活動開始時間
+        latest_time 最晚活動結束時間
+        event_suffix 
+        pick_suffix 
+    }
+}
+
+
+## /event/pick_suffix
+
+
+
+GET /pick/pick_suffix
+
+request {
+    body: null
+}
+
+response {
+    data: {
+        id
+        name
+        description
+        launcher_id
+        picking_start
+        picking_end
+        duration
+        type
+        earliest_time 最早活動開始時間
+        latest_time 最晚活動結束時間
+        token: status=picker
+    }
+}
+
+POST /pick/pick_suffix
+sucess: 
+
+request {
+    body {
+        name
+        period: [
+            {
+                start,
+                end,
+                priority
+                }
+        ]
+        
+    }
+}
+response {
+    ok: 1
+  
+}

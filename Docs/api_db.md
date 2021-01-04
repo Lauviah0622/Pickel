@@ -59,7 +59,7 @@ password 自行設置
     id int
     picker_id int
     start_time
-    end_time
+    duration
     description
     priority [3, 2, 1]
 }
