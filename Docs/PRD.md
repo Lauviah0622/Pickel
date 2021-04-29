@@ -47,7 +47,6 @@ Event launcher: Ming
   b. 部署環境
 8. 開發後端 API
 9. 開發前端
-   1.  
 
 依照 PRD 開發前端
 
