@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./pickel-logo.jpg">
+  <img src="./readme_img/pickel-logo.jpg">
 </p>
 
 # Pickel
