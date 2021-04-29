@@ -1,12 +1,15 @@
-![](readme_img/pickel-logo.jpg)
+<p align="center">
+  <img src="./pickel-logo.jpg">
+</p>
 
 # Pickel
-本專案為拖延已久之 程式導師實驗計畫 - 第四期 Final Project，此處僅包含專案規劃，前後端 Repo 可以點下方網址  
 
+本專案為拖延已久之 程式導師實驗計畫第四期 Final Project，此處僅包含專案規劃，其他 Repo 可以點擊下方連結
 
-專案規劃網址：https://github.com/Lauviah0622/Pickel
-前端 Repo：https://github.com/Lauviah0622/pickel-frontend  
-後端 Repo：https://github.com/Lauviah0622/pickel_backend
+- 專案規劃網址：https://github.com/Lauviah0622/Pickel
+- 前端 Repo：https://github.com/Lauviah0622/pickel-frontend
+- 後端 Repo：https://github.com/Lauviah0622/pickel_backend
+
 
 ## 目錄
 1. 專案簡介
@@ -274,11 +277,3 @@ Pickel 的目標是：
 ## 7. 線框稿 Wireframe
 [Figma 連結](https://www.figma.com/file/7ovucbOLb0CJ3fGWbpjKzq/Pickel?node-id=418%3A5195)
 
-
-
-
-
-
-
-5c480eb
-e656c89
